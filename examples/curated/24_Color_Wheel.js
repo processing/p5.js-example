@@ -1,4 +1,4 @@
-/*
+/**
  * @name Color Wheel
  * @description A
  * <a href="https://p5js.org/reference/#/p5/for" target="_blank">for loop</a>

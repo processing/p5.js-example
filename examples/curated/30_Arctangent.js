@@ -1,6 +1,6 @@
-/*
+/**
  * @name Arctangent
- * @description The 
+ * @description The
  * <a href="https://p5js.org/reference/#/p5/atan2">atan2()</a>
  * function calcuates the angle formed by the specified point,
  * the origin, and the positive x-axis (in the direction of the
@@ -8,7 +8,7 @@
  *
  * Move the mouse to see the angle formed between the mouse position,
  * the origin (upper left corner), and the positive x-axis (top edge
- * of the canvas).  
+ * of the canvas).
  *
  * atan2() is also used to change the direction of the eyes.
  */
@@ -20,9 +20,10 @@ function setup() {
   // Set angle mode so that atan2() returns angles in degrees
   angleMode(DEGREES);
 
-  describe('A demonstration of the atan2 function, with two eyes that follow the mouse.');
+  describe(
+    'A demonstration of the atan2 function, with two eyes that follow the mouse.'
+  );
 }
-
 
 function draw() {
   background(0);
@@ -33,7 +34,7 @@ function draw() {
 
   fill(255);
   textSize(20);
-  text("angle: " + round(angle), mouseX + 20, mouseY + 20);
+  text('angle: ' + round(angle), mouseX + 20, mouseY + 20);
 
   // Draw line and arc to indicate the angle
 
@@ -65,5 +66,3 @@ function draw() {
   ellipse(12.5, 0, 25, 25);
   pop();
 }
-
-

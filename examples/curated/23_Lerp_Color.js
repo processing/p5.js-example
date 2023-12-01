@@ -1,4 +1,4 @@
-/*
+/**
  * @name Color Interpolation
  * @description
  * <a href="https://developer.mozilla.org/en-US/docs/Glossary/Interpolation" target="_blank">Interpolation</a>

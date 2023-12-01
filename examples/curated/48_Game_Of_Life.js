@@ -1,4 +1,4 @@
-/*
+/**
  * @name Game of Life
  * @description The Game of Life is a cellular automaton created by
  * mathematician John Conway. A cellular automaton is a type of

@@ -1,21 +1,23 @@
-/*
+/**
  * @name Image Transparency
  * @description This program overlays one image over another by modifying the
- * alpha value of the image with the <a href="https://p5js.org/reference/#/p5/tint" target="_blank">tint()</a> 
- * function. Move the cursor left and right across the canvas to change the image's position. To run this example 
- * locally, you will need an image file, and a running 
+ * alpha value of the image with the <a href="https://p5js.org/reference/#/p5/tint" target="_blank">tint()</a>
+ * function. Move the cursor left and right across the canvas to change the image's position. To run this example
+ * locally, you will need an image file, and a running
  * <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.
  */
 // Define the global variables: img, offset, and easing.
-// Set offset to 0 and easing to 0.05 for moving the 
+// Set offset to 0 and easing to 0.05 for moving the
 // transparent image with the cursor position.
 let img;
 let offset = 0;
 let easing = 0.05;
 
 function setup() {
-  describe('An astronaut on planet as the background with a slightly transparent version of this image on top that moves with the horizontal direction of the user’s mouse.');
-  
+  describe(
+    'An astronaut on planet as the background with a slightly transparent version of this image on top that moves with the horizontal direction of the user’s mouse.'
+  );
+
   createCanvas(720, 400);
 
   // Load the bottom image from the canvas' assets directory.

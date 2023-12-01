@@ -1,7 +1,7 @@
-/*
+/**
  * @name Input and Button
- * @description Using the <a href="https://p5js.org/reference/#/p5.Element/createElement" target="_blank">createElement()</a>, 
- * <a href="https://p5js.org/reference/#/p5/createInput" target="_blank">createInput()</a>, 
+ * @description Using the <a href="https://p5js.org/reference/#/p5.Element/createElement" target="_blank">createElement()</a>,
+ * <a href="https://p5js.org/reference/#/p5/createInput" target="_blank">createInput()</a>,
  * and <a href="https://p5js.org/reference/#/p5.Element/createButton" target="_blank">createButton()</a> functions,
  * you can take a string of text submitted via text input and transpose it into multiple elements within your canvas.
  */
@@ -23,7 +23,7 @@ function setup() {
   button = createButton('submit');
   button.position(nameInput.x + nameInput.width, 65);
 
-  //Use the mousePressed() method to call the greet() 
+  //Use the mousePressed() method to call the greet()
   //function when the button is pressed.
   button.mousePressed(greet);
 }
@@ -53,6 +53,6 @@ function greet() {
     text(name, 0, 0);
     pop();
   }
-  
+
   describe(`${name} repeated 200 times across a white background.`);
 }

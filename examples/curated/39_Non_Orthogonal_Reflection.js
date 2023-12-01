@@ -1,4 +1,4 @@
-/*
+/**
  * @name Non Orthogonal Reflection
  * @description This example demonstrates a ball bouncing on a slanted
  * surface, implemented using vector calculations for reflection.
@@ -16,7 +16,6 @@ let radius = 6;
 let speed = 3.5;
 let circleColor;
 
-
 function setup() {
   createCanvas(710, 400);
   colorMode(HSB);
@@ -26,16 +25,17 @@ function setup() {
   setColors();
 
   // Set initial position to middle of canvas
-  position = createVector(width/2, height/2);
+  position = createVector(width / 2, height / 2);
 
   // Set the velocity with a random direction
   velocity = p5.Vector.random2D();
   velocity.mult(speed);
 
   // Create screen reader accessible description
-  describe('A bouncing ball simulation demonstrating the use of vectors for reflection.');
+  describe(
+    'A bouncing ball simulation demonstrating the use of vectors for reflection.'
+  );
 }
-
 
 function setColors() {
   // Choose random hues
@@ -43,9 +43,7 @@ function setColors() {
   circleColor = color(random(256), 255, 255);
 }
 
-
 function draw() {
-
   // Clear background, using alpha for fade effect
   fill(0, 12);
   noStroke();
@@ -57,7 +55,7 @@ function draw() {
 
   // Draw the circle
   fill(circleColor);
-  circle(position.x, position.y, 2*radius);
+  circle(position.x, position.y, 2 * radius);
 
   // Move the circle
   position.add(velocity);
@@ -66,7 +64,6 @@ function draw() {
   handleBaseCollision();
   handleBoundaryCollision();
 }
-
 
 function handleBaseCollision() {
   // Calculate the normal vector and intercept for the base line
@@ -79,21 +76,23 @@ function handleBaseCollision() {
   if (position.dot(normal) < intercept) {
     // Calculate the reflected velocity vector: v -= 2 * v.dot(n) * n
     let dot = velocity.dot(normal);
-    let bounce = p5.Vector.mult(normal, 2*dot);
+    let bounce = p5.Vector.mult(normal, 2 * dot);
     velocity.sub(bounce);
 
     // Draw the normal vector at collision point
     stroke(255);
-    line(position.x, position.y,
-      position.x + normal.x * 100, position.y + normal.y * 100
+    line(
+      position.x,
+      position.y,
+      position.x + normal.x * 100,
+      position.y + normal.y * 100
     );
   }
 }
 
-
 function handleBoundaryCollision() {
   // Handle side bounce
-  if (position.x < radius || position.x > width-radius) {
+  if (position.x < radius || position.x > width - radius) {
     velocity.x *= -1;
   }
 
@@ -107,4 +106,3 @@ function handleBoundaryCollision() {
     setColors();
   }
 }
-

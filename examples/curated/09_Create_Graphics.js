@@ -1,13 +1,15 @@
-/*
+/**
  * @name Create Graphics
- * @description The <a href="https://p5js.org/reference/#/p5/createGraphics" target="_blank">createGraphics()</a> function can be 
- * used to create a new p5.Graphics object, which can serve as an off-screen graphics buffer within the canvas. 
+ * @description The <a href="https://p5js.org/reference/#/p5/createGraphics" target="_blank">createGraphics()</a> function can be
+ * used to create a new p5.Graphics object, which can serve as an off-screen graphics buffer within the canvas.
  */
 // Define graphic as a global vairable.
 let graphic;
 
 function setup() {
-  describe('Black canvas with a very dark grey rectangle in the middle. When the cursor is hovered over the canvas, a white circle follows the cursor in the black areas of the canvas, but not over the dark grey rectangle.');
+  describe(
+    'Black canvas with a very dark grey rectangle in the middle. When the cursor is hovered over the canvas, a white circle follows the cursor in the black areas of the canvas, but not over the dark grey rectangle.'
+  );
   createCanvas(710, 400);
 
   //Create the graphic that will be placed within the canvas.
@@ -33,8 +35,8 @@ function draw() {
   graphic.background(51);
   graphic.noFill();
 
-  // When the cursor hovers over the offscreen buffer, replicate the 
-  // circle that is drawn when the cursor is hovering over the 
+  // When the cursor hovers over the offscreen buffer, replicate the
+  // circle that is drawn when the cursor is hovering over the
   // canvas. Within the buffer area, only show the outline of the circle.
   graphic.stroke(255);
   graphic.ellipse(mouseX - 150, mouseY - 75, 60, 60);

@@ -1,9 +1,9 @@
-/*
+/**
  * @name Continuous Lines
  * @description Click and drag the mouse to draw a line.
  *
  * This example demonstrates the use of several built-in
- * variables.  
+ * variables.
  * <a href="https://p5js.org/reference/#/p5/mouseX">mouseX</a>
  * and
  * <a href="https://p5js.org/reference/#/p5/mouseY">mouseY</a>
@@ -12,17 +12,17 @@
  * <a href="https://p5js.org/reference/#/p5/pmouseX">pmouseX</a>
  * and
  * <a href="https://p5js.org/reference/#/p5/pmouseY">pmouseY</a>.
- * 
- * The 
+ *
+ * The
  * <a href="https://p5js.org/reference/#/p5/mouseIsPressed">mouseIsPressed</a>.
  * indicates whether the user is currently pressing the mouse, and
  * <a href="https://p5js.org/reference/#/p5/frameCount">frameCount</a>
  * indicates how many frames have been drawn.
- * 
- * This example also shows the use of 
+ *
+ * This example also shows the use of
  * <a href="https://p5js.org/reference/#/p5/colorMode">colorMode</a> with HSB
- * (hue-saturation-brightness), so that the first variable sets the hue.  
- * The 
+ * (hue-saturation-brightness), so that the first variable sets the hue.
+ * The
  * <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">remainder</a>
  * operator is used (frameCount%256) to obtain a number between 0 and 255,
  * so that the hue changes each frame.
@@ -47,13 +47,11 @@ function setup() {
 
 function draw() {
   // Change the hue with each frame
-  stroke(frameCount%256, 255, 255);
+  stroke(frameCount % 256, 255, 255);
 
-  // If the mouse button is pressed, draw a line from 
+  // If the mouse button is pressed, draw a line from
   // previous mouse position to current mouse position
   if (mouseIsPressed === true) {
     line(pmouseX, pmouseY, mouseX, mouseY);
   }
 }
-
-

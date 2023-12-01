@@ -1,24 +1,26 @@
-/*
+/**
  * @name Acceleration Color
- * @description You can use the <a href="https://p5js.org/reference/#/p5/deviceMoved" target="_blank">deviceMoved()</a> 
- * function to detect when the phone is rotated, and update the background color of the canvas. The background color is mapped to the 
- * <a href="https://p5js.org/reference/#/p5/accelerationX" target="_blank">accelerationX</a>, 
- * <a href="https://p5js.org/reference/#/p5/accelerationY" target="_blank">accelerationY</a>, 
- * and <a href="https://p5js.org/reference/#/p5/accelerationZ" target="_blank">accelerationZ</a> values. 
- * The <a href="https://p5js.org/reference/#/p5/deviceMoved" target="_blank">deviceMoved()</a> function is 
+ * @description You can use the <a href="https://p5js.org/reference/#/p5/deviceMoved" target="_blank">deviceMoved()</a>
+ * function to detect when the phone is rotated, and update the background color of the canvas. The background color is mapped to the
+ * <a href="https://p5js.org/reference/#/p5/accelerationX" target="_blank">accelerationX</a>,
+ * <a href="https://p5js.org/reference/#/p5/accelerationY" target="_blank">accelerationY</a>,
+ * and <a href="https://p5js.org/reference/#/p5/accelerationZ" target="_blank">accelerationZ</a> values.
+ * The <a href="https://p5js.org/reference/#/p5/deviceMoved" target="_blank">deviceMoved()</a> function is
  * available for mobile devices only.
  */
 // Establish the global variables: redValue, greenValue, and blueValue.
 let redValue, greenValue, blueValue;
 
 function setup() {
-  describe('Canvas available on mobile devices only. Canvas with a background color that changes based on the movement of the device.');
+  describe(
+    'Canvas available on mobile devices only. Canvas with a background color that changes based on the movement of the device.'
+  );
 
-  // Make the canvas the full width and height of the 
+  // Make the canvas the full width and height of the
   // device's viewport.
   createCanvas(displayWidth, displayHeight);
 
-  // Set the redValue, greenValue, and blueValue variables to 
+  // Set the redValue, greenValue, and blueValue variables to
   //random hue values.
   redValue = random(50, 255);
   greenValue = random(0, 200);

@@ -1,4 +1,4 @@
-/*
+/**
  * @name Connected Particles
  * @description This example uses two custom
  * <a href="https://p5js.org/reference/#/p5/class" target="_blank">classes</a>.

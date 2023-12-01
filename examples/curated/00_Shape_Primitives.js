@@ -1,6 +1,6 @@
-/*
+/**
  * @name Shape Primitives
- * @description This program demostrates the use of the basic shape 
+ * @description This program demostrates the use of the basic shape
  * primitive functions
  * <a href="https://p5js.org/reference/#/p5/rect">rect()</a>,
  * <a href="https://p5js.org/reference/#/p5/ellipse">ellipse()</a>,
@@ -9,7 +9,6 @@
  * <a href="https://p5js.org/reference/#/p5/arc">arc()</a>, and
  * <a href="https://p5js.org/reference/#/p5/triangle">triangle()</a>.
  */
-
 
 function setup() {
   createCanvas(720, 400);
@@ -32,7 +31,6 @@ function setup() {
 
   fill('fuchsia');
   triangle(550, 350, 600, 250, 650, 350);
- 
+
   describe('Six primitive shapes arranged in a grid.');
 }
-

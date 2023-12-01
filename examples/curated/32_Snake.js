@@ -1,4 +1,4 @@
-/*
+/**
  * @name Snake game
  * @description This is a reproduction of a type of arcade game called
  * Snake. The first Snake game was Blockade, released in 1976, and many

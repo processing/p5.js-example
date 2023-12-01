@@ -1,7 +1,7 @@
-/*
+/**
  * @name Video
  * @frame 710,250
- * @description Using the <a href="https://p5js.org/reference/#/p5/noCanvas" target="_blank">noCanvas()</a> 
+ * @description Using the <a href="https://p5js.org/reference/#/p5/noCanvas" target="_blank">noCanvas()</a>
  * and <a href="https://p5js.org/reference/#/p5/createVideo" target="_blank">createVideo()</a> functions, you can upload
  * a video into the <a href="https://developer.mozilla.org/en-US/docs/Glossary/DOM" target="_blank">DOM</a> without embedding the video within a canvas.
  */
@@ -37,8 +37,8 @@ function toggleVid() {
     video.pause();
     button.html('play');
 
-  // If the video is paused, play the video with
-  // the loop() method and make the button's text say 'pause.'
+    // If the video is paused, play the video with
+    // the loop() method and make the button's text say 'pause.'
   } else {
     video.loop();
     button.html('pause');

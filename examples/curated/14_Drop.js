@@ -1,33 +1,33 @@
-/*
+/**
  * @name Image Drop
- * @description <a href="https://p5js.org/reference/#/p5.Element/drop" target="_blank">drop()</a> 
- * is a p5.js element method that registers a callback every time a file is loaded into the element. 
+ * @description <a href="https://p5js.org/reference/#/p5.Element/drop" target="_blank">drop()</a>
+ * is a p5.js element method that registers a callback every time a file is loaded into the element.
  * The uploaded file is created into a <a href="https://p5js.org/reference/#/p5.File" target="_blank">p5.File</a> class.
- * You can use the <a href="https://p5js.org/reference/#/p5.Element/drop" target="_blank">drop()</a> callback to check 
+ * You can use the <a href="https://p5js.org/reference/#/p5.Element/drop" target="_blank">drop()</a> callback to check
  * the file type, then write conditional statements responding to the file type.
  */
 // Define canvasText as a global variable.
 let canvasText = 'Drag an image file onto the canvas.';
 
-function setup() {  
+function setup() {
   // Assign the dropArea variable to the canvas.
   let dropArea = createCanvas(710, 400);
 
-  // Add the drop() method to the canvas. Call the gotFile 
+  // Add the drop() method to the canvas. Call the gotFile
   // function when a file is dropped into the canvas.
   dropArea.drop(gotFile);
 }
 
-function draw(){
+function draw() {
   background(100);
-  
+
   // Add instructions for dropping an image file in the canvas.
   fill(255);
   noStroke();
   textSize(24);
   textAlign(CENTER);
   text(canvasText, width / 2, height / 2);
-  
+
   describe(`Grey canvas with the text "${canvasText}" in the center.`);
 }
 
@@ -42,6 +42,6 @@ function gotFile(file) {
   } else {
     // If the file dropped into the canvas is not an image,
     // change the instructions to 'Not an image file!'
-    canvasText= 'Not an image file!';
+    canvasText = 'Not an image file!';
   }
 }

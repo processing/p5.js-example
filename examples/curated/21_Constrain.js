@@ -1,4 +1,4 @@
-/*
+/**
  * @name Constrain
  * @description This example draws a circle as the mouse position but
  * keeps the circle within a rectangle. It does so by passing the

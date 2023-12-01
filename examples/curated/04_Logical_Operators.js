@@ -1,4 +1,4 @@
-/*
+/**
  * @name Conditions
  * @frame 400,400
  * @description If and else statements allow a

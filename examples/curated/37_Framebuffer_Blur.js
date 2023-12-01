@@ -1,4 +1,4 @@
-/*
+/**
  * @name Blur using Framebuffer Depth
  * @description The
  * <a href="https://www.khronos.org/opengl/wiki/Shader" target="_blank">shader</a>

@@ -1,16 +1,20 @@
-/*
+/**
  * @name Soft Body
- * @description Softbody dynamics simulation using curveVertex() and 
+ * @description Softbody dynamics simulation using curveVertex() and
  * curveTightness().
  */
 
+let centerX = 0.0,
+  centerY = 0.0;
 
-let centerX = 0.0, centerY = 0.0;
-
-let radius = 45, rotAngle = -90;
-let accelX = 0.0, accelY = 0.0;
-let deltaX = 0.0, deltaY = 0.0;
-let springing = 0.0009, damping = 0.98;
+let radius = 45,
+  rotAngle = -90;
+let accelX = 0.0,
+  accelY = 0.0;
+let deltaX = 0.0,
+  deltaY = 0.0;
+let springing = 0.0009,
+  damping = 0.98;
 
 let nodes = 5;
 
@@ -27,11 +31,11 @@ function setup() {
   createCanvas(710, 400);
 
   // Start in the center of the canvas
-  centerX = width/2;
-  centerY = height/2;
+  centerX = width / 2;
+  centerY = height / 2;
 
   // Initialize arrays to 0
-  for (let i = 0; i < nodes; i++){
+  for (let i = 0; i < nodes; i++) {
     nodeStartX[i] = 0;
     nodeStartY[i] = 0;
     nodeY[i] = 0;
@@ -40,7 +44,7 @@ function setup() {
   }
 
   // Initialize frequencies for corner nodes
-  for (let i = 0; i < nodes; i++){
+  for (let i = 0; i < nodes; i++) {
     frequency[i] = random(5, 12);
   }
 
@@ -59,7 +63,7 @@ function draw() {
 
 function drawShape() {
   // Calculate node starting locations
-  for (let i = 0; i < nodes; i++){
+  for (let i = 0; i < nodes; i++) {
     nodeStartX[i] = centerX + cos(radians(rotAngle)) * radius;
     nodeStartY[i] = centerY + sin(radians(rotAngle)) * radius;
     rotAngle += 360.0 / nodes;
@@ -68,10 +72,10 @@ function drawShape() {
   // Draw the polygon
 
   curveTightness(organicConstant);
-  fill(lerpColor(color('red'), color('yellow'), 1-organicConstant));
+  fill(lerpColor(color('red'), color('yellow'), 1 - organicConstant));
 
   beginShape();
-  for (let i = 0; i < nodes; i++){
+  for (let i = 0; i < nodes; i++) {
     curveVertex(nodeX[i], nodeY[i]);
   }
   endShape(CLOSE);
@@ -97,14 +101,12 @@ function moveShape() {
   accelY *= damping;
 
   // Change curve tightness
-  organicConstant = 1 - ((abs(accelX) + abs(accelY)) * 0.1);
+  organicConstant = 1 - (abs(accelX) + abs(accelY)) * 0.1;
 
   // Move nodes
-  for (let i = 0; i < nodes; i++){
+  for (let i = 0; i < nodes; i++) {
     nodeX[i] = nodeStartX[i] + sin(radians(angle[i])) * (accelX * 2);
     nodeY[i] = nodeStartY[i] + sin(radians(angle[i])) * (accelY * 2);
     angle[i] += frequency[i];
   }
 }
-
-

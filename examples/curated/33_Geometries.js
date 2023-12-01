@@ -1,4 +1,4 @@
-/*
+/**
  * @name Geometries
  * @description p5's
  * <a href="https://p5js.org/reference/#/p5/WEBGL" target="_blank">WEBGL</a>

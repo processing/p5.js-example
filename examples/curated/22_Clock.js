@@ -1,4 +1,4 @@
-/*
+/**
  * @name Clock
  * @description The current time can be read with the
  * <a href="https://p5js.org/reference/#/p5/second" target="_blank">second()</a>,
