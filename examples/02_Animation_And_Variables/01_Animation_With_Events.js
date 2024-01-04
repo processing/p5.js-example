@@ -38,7 +38,7 @@ function draw() {
   // Clear the background
   background(0);
 
-  // Draw a circle, with hue determined by frameCount
+  // Draw a circle, with hue determined by x position
   fill(x / 3, 90, 90);
   circle(x, height / 2, 50);
 
